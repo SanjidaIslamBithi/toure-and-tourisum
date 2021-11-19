@@ -94,8 +94,7 @@ async function run() {
       const result = await allbuyingservicesCollection.insertOne(
         boughtservices
       );
-      // console.log(boughtservices);
-      // console.log(result);
+
       res.json(result);
     });
 
@@ -105,11 +104,6 @@ async function run() {
       const query = { _id: ObjectId(id) };
       const result = await allbuyingservicesCollection.deleteOne(query);
       res.json(result);
-      // allbuyingservicesCollection
-      //   .deleteOne({ _id: ObjectId(req.params._id) })
-      //   .then((result) => {
-      //     res.send(result.deletedCount > 0);
-      //   });
     });
 
     //-------------------for allservices  page where more than 6 exists--------------
